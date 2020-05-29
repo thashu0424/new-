@@ -39,7 +39,7 @@ img
 .container
 {
   display: flex;
-  flex-flow: column;
+  flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
@@ -81,7 +81,7 @@ button
   color: hsl(257, 40%, 49%);
   background-color: white;
 }
-@media only screen and (min-width:375px)
+@media only screen and (min-width:756px)
 {
   body
   {
@@ -89,9 +89,7 @@ button
   }
 .container
 {
-  display: grid;
-  grid-template-columns: repeat(4,auto);
-  grid-auto-rows:auto;
+
 }
 .img{
   grid-column-start: 1;
@@ -120,4 +118,14 @@ button
   width: 10rem;
   padding-top: 3rem;
 }
+}
+
+@media only screen and (min-width:768px){
+  .container{
+    display: flex;
+  }
+
+  .flex-row{
+    flex-direction: row;
+  }
 }

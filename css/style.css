@@ -1,0 +1,123 @@
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+@font-face {
+  font-family: "papu";
+  src: url(../fonts/pops.ttf);
+}
+@font-face {
+  font-family: "papu1";
+  src: url(../fonts/sans.ttf);
+}
+body{
+  height: 100%;
+  background-image: url(../images/bg-mobile.svg);
+  background-color: hsl(257, 40%, 49%);
+  color: white;
+  font-weight: 400;
+  font-family:"papu1";
+}
+html
+{
+  height: 100%;
+}
+img
+{
+  max-width: 100%;
+  max-height: 100%;
+  display: block; /* remove extra space below image */
+}
+.head1,.head2
+{
+  font-weight:400;
+  font-family: "papu";
+  font-size: 1.35rem;
+}
+.heading
+{
+  text-align: center;
+}
+.container
+{
+  display: flex;
+  flex-flow: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.content
+{
+  text-align: center;
+}
+.img
+{
+  padding-left:2rem;
+  width:7rem;
+  align-self: flex-start;
+}
+.illust
+{
+  width: 16rem;
+}
+.container>div
+{
+  padding: 1rem;
+  flex: 1;
+}
+.social
+{
+  display: flex;
+  justify-content:space-around;
+}
+.social>img{
+  padding: 0.7rem;
+  width: 17px;
+}
+button
+{
+  border-style: none;
+  border-radius: 2rem;
+  width: 10rem;
+  height: 2rem;
+  color: hsl(257, 40%, 49%);
+  background-color: white;
+}
+@media only screen and (min-width:375px)
+{
+  body
+  {
+    background-image: url(../images/bg-desktop.svg);
+  }
+.container
+{
+  display: grid;
+  grid-template-columns: repeat(4,auto);
+  grid-auto-rows:auto;
+}
+.img{
+  grid-column-start: 1;
+  grid-column-end: 5;
+}
+.illust{
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 4;
+  width:42rem;
+}
+.illust > img {
+  object-fit: cover;
+  width: 100%;
+  max-height: 100%;
+}
+.container>.illust
+{
+  padding-left:4.5rem;
+  padding-top: 4.5rem;
+}
+.container>.img
+{
+  padding-left:4.5rem;
+  width: 10rem;
+  padding-top: 3rem;
+}
+}
